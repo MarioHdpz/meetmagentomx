@@ -1,0 +1,30 @@
+web:
+    image: icebrick.pengostores.mx:4567/magento2/images:local-web_v1.0.1
+    ports:
+        - 8007:80
+    volumes:
+        - ~/.ssh:/home/magento2/.ssh
+        - ./:/var/www/html
+        - ./log/nginx:/var/log/nginx
+        - ./log/php:/var/log/php-fpm
+        - ./build:/build/
+    environment:
+        - MAGENTO_USER=magento2
+        - MAGENTO_VERSION=project-community-edition
+        - MAGENTO_DEPLOY_MODE=developer
+        - MAGENTO_BASE_URL=http://dev.magentomx.local/
+        - MAGENTO_BACKEND_FRONTNAME=admindev
+        - MAGENTO_TIMEZONE=America/Mexico_City
+        - MAGENTO_CURRENCY=MXN
+        - MAGENTO_LANGUAGE=es_MX
+        - MAGENTO_DB_HOST=mysql
+        - MAGENTO_DB_USERNAME=root
+        - MAGENTO_DB_PASSWORD=mysql
+        - MAGENTO_DB_NAME=magentomx
+        - MAGENTO_ADMIN_USER=admin
+        - MAGENTO_ADMIN_PASSWORD=admin1234
+        - MAGENTO_ADMIN_EMAIL=admin@pengostores.com
+    external_links:
+        - mysql
+    container_name: magentomx-web
+

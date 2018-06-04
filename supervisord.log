@@ -1,0 +1,10 @@
+2018-06-04 22:32:49,189 CRIT Supervisor running as root (no user in config file)
+2018-06-04 22:32:49,241 INFO supervisord started with pid 9
+2018-06-04 22:32:50,243 INFO spawned: 'apache' with pid 12
+2018-06-04 22:32:50,245 INFO spawned: 'cron' with pid 13
+2018-06-04 22:32:50,247 INFO spawned: 'sshd' with pid 14
+2018-06-04 22:32:50,250 INFO spawned: 'php-fpm' with pid 15
+2018-06-04 22:32:52,144 INFO success: apache entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-06-04 22:32:52,144 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-06-04 22:32:52,144 INFO success: sshd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-06-04 22:32:52,144 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
