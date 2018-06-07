@@ -1,0 +1,116 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .sponsors-index-index {
+
+        .sponsors-wrapper {
+            padding: 30px 20px 0;
+            margin-top: 50px;
+        }
+
+        .sponsors-items {
+            margin: 0 0 40px;
+
+            * {
+                box-sizing: border-box;
+            }
+
+            h2 {
+                font-size: 22px;
+                font-weight: @font-weight__bold;
+                color: @color-gray20;
+                margin: 0 0 20px;
+            }
+
+            ul, li {
+                list-style: none;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            ul {
+                &:extend(.abs-add-clearfix all);
+                border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+                text-align: center;
+
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-bottom: 15px;
+                    width: 90%;
+                    text-align: center;
+                }
+            }
+        }
+        .page-main {
+            >.page-title-wrapper {
+                .page-title {
+                    background: #e74011;
+                    color: @color-white;
+                    font-weight: 700;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    padding: 20px 20px 25px;
+                    text-align: center;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .sponsors-index-index {
+        .sponsors-items {
+            ul {
+                &.column_2 {
+                    li {
+                        width: 49%;
+                    }
+                }
+
+                &.column_3 {
+                    li {
+                        width: 32.8%;
+                    }
+                }
+
+                &.column_4 {
+                    li {
+                        width: 23.8%;
+                    }
+                }
+
+                &.column_5 {
+                    li {
+                        width: 19.5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+& when (@media-target = 'mobile'),
+(@media-target = 'all') {
+    @media all and (max-width: (@screen__m)) {
+        .sponsors-index-index {
+            .sponsors-items {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

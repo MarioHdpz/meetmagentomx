@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Wagento. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Sponsors Listing -->
+    <preference for="Wagento\Sponsors\Api\Data\SponsorsInterface"
+                type="Wagento\Sponsors\Model\Sponsors" />
+
+    <preference for="Wagento\Sponsors\Api\SponsorsRepositoryInterface"
+                type="Wagento\Sponsors\Model\SponsorsRepository" />
+
+    <preference for="Wagento\Sponsors\Api\Data\SponsorsSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults" />
+
+    <!-- Sponsors Type -->
+    <preference for="Wagento\Sponsors\Api\Data\SponsorsTypeInterface"
+                type="Wagento\Sponsors\Model\SponsorsType" />
+
+    <preference for="Wagento\Sponsors\Api\SponsorsTypeRepositoryInterface"
+                type="Wagento\Sponsors\Model\SponsorsTypeRepository" />
+
+    <preference for="Wagento\Sponsors\Api\Data\SponsorsTypeSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults" />
+
+    <!-- Image uploader -->
+    <virtualType name="Wagento\Sponsors\Image\Upload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">sponsors/tmp/image</argument>
+            <argument name="basePath" xsi:type="string">sponsors/image</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Wagento\Sponsors\Controller\Adminhtml\Sponsors\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Wagento\Sponsors\Image\Upload</argument>
+        </arguments>
+    </type>
+</config>

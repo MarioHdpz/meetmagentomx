@@ -1,0 +1,79 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Wagento\Widget\Block\SpeakerWidget $block */
+?>
+<?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())): ?>
+    <?php
+    $type = 'widget-product-grid';
+
+    $mode = 'grid';
+
+    $image = 'new_products_content_widget_grids';
+    $items = $block->getProductCollection()->getItems();
+
+    $showWishlist = true;
+    $showCompare = true;
+    $showCart = true;
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
+    $description = false;
+    ?>
+    <div class="block widget block-products-list <?= /* @noEscape */ $mode ?>">
+        <?php if ($block->getTitle()): ?>
+            <div class="block-title">
+                <strong><?= $block->escapeHtml(__($block->getTitle())) ?></strong>
+            </div>
+        <?php endif ?>
+        <div class="block-content">
+            <?= /* @noEscape */ '<!-- ' . $image . '-->' ?>
+            <div class="products-<?= /* @noEscape */ $mode ?> <?= /* @noEscape */ $mode ?>">
+                <ol class="speakers-list">
+                    <?php $iterator = 1; ?>
+                    <?php foreach ($items as $_item): ?>
+                    <?php if ($iterator++ != 1): ?></li><?php endif ?>
+                    <li>
+                        <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="speaker">
+                            <?= $block->getImage($_item, $image)->toHtml() ?>
+                            <div class="speaker-description">
+                                <div>
+                                    <div class="speaker-name"><?= $block->escapeHtml($_item->getName()) ?></div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <?= ($iterator == count($items)+1) ? '</li>' : '' ?>
+                        <?php endforeach ?>
+                </ol>
+            </div>
+            <?= $block->getPagerHtml() ?>
+        </div>
+    </div>
+<?php endif;?>
+<script type="text/javascript">
+    require([ 'jquery',
+        'jquery/ui'], function($)
+    {
+        var ol = document.querySelector('ol.speakers-list');
+        for (var i = ol.children.length; i >= 0; i--) {
+            ol.appendChild(ol.children[Math.random() * i | 0]);
+        }
+        $( "ol.speakers-list li:nth-child(1)" ).before('<li class="our-speakers-static hide-on-dekstop">\n' +
+            '<div class="absolute-content">\n' +
+            '<h1>Speakers</h1>\n' +
+            '<p></p>\n' +
+            '<a class="btn-white" href="<?php $this->getBaseUrl()?>speakers.html">Speaker list</a></div>\n' +
+            '</li>');
+        $( "ol.speakers-list li:nth-child(2)" ).after('<li class="our-speakers-static hide-on-mobile">\n' +
+            '<div class="absolute-content">\n' +
+            '<h1>Speakers</h1>\n' +
+            '<p></p>\n' +
+            '<a class="btn-white" href="<?php $this->getBaseUrl()?>speakers.html">Speaker list</a></div>\n' +
+            '</li>');
+    });
+</script>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <referenceBlock name="product.info.sku" remove="true" />
+            <referenceBlock name="product.info.review" remove="true" />
+            <referenceBlock name="product.price.final" remove="true" />
+            <referenceBlock name="product.price.tier" remove="true" />
+            <referenceBlock name="product.info" remove="true" />
+            <referenceBlock name="product.info.addto" remove="true" />
+            <referenceBlock name="product.info.mailto" remove="true" />
+
+            <container name="speaker.detail" label="Speaker Detail" htmlTag="div" htmlClass="speaker-detail">
+                <referenceContainer name="product.info.main">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.speakertitle" template="product/view/speaker.phtml" before="-">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getSpeaker_Title</argument>
+                        <argument name="at_code" xsi:type="string">speaker_title</argument>
+                        <argument name="css_class" xsi:type="string">speaker_title</argument>
+                        <argument name="at_label" xsi:type="string"></argument>
+                        <argument name="add_attribute" xsi:type="string">itemprop="speaker_title"</argument>
+                    </arguments>
+                </block>
+                </referenceContainer>
+            </container>
+
+        </referenceContainer>
+        <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.presentation" template="product/view/presentation.phtml" after="-">
+        </block>
+
+        <move element="product.info.media" destination="speaker.detail" before="-"/>
+        <move element="product.info.main" destination="speaker.detail" after="-"/>
+        <referenceBlock name="reviews.tab" remove="true" />
+    </body>
+</page>

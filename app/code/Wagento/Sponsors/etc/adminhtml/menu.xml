@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Wagento. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Wagento_Sponsors::manager" title="Sponsors" translate="title" module="Wagento_Sponsors" sortOrder="10" resource="Wagento_Sponsors::manager"/>
+        <add id="Wagento_Sponsors::sponsors" title="Sponsors List" translate="title" module="Wagento_Sponsors" sortOrder="10" parent="Wagento_Sponsors::manager" action="sponsors/sponsors/index" resource="Wagento_Sponsors::sponsors"/>
+        <add id="Wagento_Sponsors::sponsors_type" title="Sponsors Types" translate="title" module="Wagento_Sponsors" sortOrder="20" parent="Wagento_Sponsors::manager" action="sponsors/type/index" resource="Wagento_Sponsors::sponsors_type"/>
+    </menu>
+</config>

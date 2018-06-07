@@ -1,0 +1,1545 @@
+// /**
+//  * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Extend fallback
+//  _____________________________________________
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .container {
+        width: 66.6667%;
+        margin-left: 16.6667%;
+        padding: 5.04541vw 15px;
+        box-sizing: border-box;
+
+        * {
+            box-sizing: border-box;
+        }
+    }
+
+    .banner {
+        position: relative;
+        .banner-text-wrapper {
+            background-color: @color-orange;
+            box-sizing: border-box;
+            display: block;
+            height: 99.2%;
+            left: 0;
+            margin-left: 16.6667%;
+            padding: 0 0 0 50px;
+            position: absolute;
+            top: 0;
+            width: 33.3333%;
+
+            h1.pageTitle {
+                color: @color-white;
+                font-weight: @font-weight__bold;
+                padding-bottom: 0;
+                font-size: 36px;
+                max-width: 620px;
+                margin: 0;
+            }
+        }
+        .container {
+            padding-bottom: 50px;
+            width: auto;
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+        }
+
+    }
+
+    .homepage-banner {
+        position: relative;
+
+        img {
+            display: block;
+        }
+
+        .banner-text-wrapper {
+            bottom: 0;
+            color: #ffffff;
+            left: 17.5%;
+            margin: 0;
+            max-width: 45%;
+            padding: 2vw;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            background: none;
+            height: auto;
+            top: auto;
+
+
+            p {
+                color: @color-white;
+                font-size: 2vw;
+                font-weight: 400;
+                line-height: 1.2;
+                padding: 0;
+                margin: 0;
+            }
+
+            h1.pageTitle {
+                color: @color-white;
+                font-weight: @font-weight__bold;
+                letter-spacing: 0px;
+                padding-bottom: 0;
+                line-height: 1;
+                font-size: 5vw;
+                max-width: 620px;
+                margin: 1vw 0;
+
+            }
+
+            .container {
+                position: initial;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .banner-text-wrapper-right {
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            right: 0;
+            margin: 0;
+            max-width: 37.355%;
+            padding: 3vw 2vw 2vw 2vw;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            top: 0;
+
+            p {
+                color: @color-white;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.2;
+                padding: 0;
+                margin: 0;
+            }
+
+            ul {
+                li {
+                    font-size: 16px;
+                    margin-bottom: 0.2vw;
+                }
+            }
+
+            h1.pageTitle {
+                color: @color-white;
+                font-weight: @font-weight__bold;
+                letter-spacing: 0px;
+                padding-bottom: 0;
+                line-height: 1;
+                font-size: 36px;
+                max-width: 620px;
+                margin: 0.5vw 0 1vw;
+            }
+
+            .container {
+                position: relative;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .container {
+        .content {
+            padding: 0;
+            display: inline-block;
+
+            .content-left {
+                width: 44%;
+                float: left;
+            }
+            .content-right {
+                width: 44%;
+                float: right;
+            }
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    .call-for-papers {
+        padding-bottom: 50px;
+        display: inline-block;
+        width: 100%;
+        h1 {
+            padding-bottom: 30px;
+            padding-top: 10px;
+            color: @color-gray-darken5;
+            font-size: 81px;
+            letter-spacing: -3px;
+            line-height: 75px;
+            font-weight: @font-weight__bold;
+            margin: 0;
+        }
+        .section-details {
+            padding: 15px 0 30px 0;
+        }
+    }
+
+    #schedule {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding-bottom: 50px;
+        padding-top: 40px;
+        .sel-date.selected {
+            font-size: 41px;
+            margin: 0 0 20px 10%;
+        }
+
+        .room-events {
+
+            .item {
+                width: 100%;
+                display: table;
+                background: @color-gray-light0;
+                .technical-room {
+                    background: @color-gray-darken0;
+                }
+
+                &:nth-child(2n+1) {
+                    background: @color-gray-darken0;
+                    .technical-room {
+                        background: @color-gray-light0;
+                    }
+                }
+
+                .title {
+                    background: @color-white !important;
+                    padding: 30px;
+                    font-weight: @font-weight__bold;
+                    text-transform: uppercase;
+                    color: @color-black;
+                }
+
+                .agenda-hours {
+                    width: 10%;
+                    color: @color-gray-darken7;
+                    font-size: 13px;
+                    display: table-cell;
+                    background: @color-white;
+                    padding: 30px 0 0 35px;
+                }
+
+                .room-presentation {
+                    width: 45%;
+                    display: table-cell;
+                    padding: 30px 10px 30px 50px;
+                    border: 1px solid @color-gray91;
+                    color: @color-gray-darken7;
+                    line-height: 25px;
+                    a {
+                        color: @color-black;
+                        &:hover {
+                            color: @color-black;
+                        }
+                    }
+
+                    a.presentation-speaker {
+                        color: @color-gray-darken7;
+                        font-weight: normal;
+                        &:hover {
+                            color: @color-gray-darken7;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .contact-index-index {
+        .page-title-wrapper {
+            display: none;
+        }
+        .content {
+            display: block;
+            max-width: 500px;
+        }
+    }
+
+     .speaker-detail {
+        background: @color-orange;
+        display: inline-block;
+        width: 100%;
+         
+        .product{
+            &.attribute {
+                .value {
+                    > p {
+                        color: @color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-social-link {
+        display: inline-block;
+        .footer-social {
+            ul{
+                li {
+                    display: inline;
+                    margin-right: 20px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    .footer-facebook {
+                        &:after {
+                            font-family: @font-family__fontawesome;
+                            content: "\f09a";
+                            color: @color-black;
+                            font-size: 20px;
+                        }
+                        span {
+                            display: none;
+                        }
+                        &:hover {
+                            &:after {
+                                color: #888888;
+                            }
+                        }
+                    }
+                    .footer-twitter {
+                        &:after {
+                            font-family: @font-family__fontawesome;
+                            content: "\f099";
+                            color: @color-black;
+                            font-size: 20px;
+                        }
+                        span {
+                            display: none;
+                        }
+                        &:hover {
+                            &:after {
+                                color: #888888;
+                            }
+                        }
+                    }
+                    .footer-instagram {
+                        &:after {
+                            font-family: @font-family__fontawesome;
+                            content: "\f16d";
+                            color: @color-black;
+                            font-size: 20px;
+                        }
+                        span {
+                            display: none;
+                        }
+                        &:hover {
+                            &:after {
+                                color: #888888;
+                            }
+                        }
+                    }
+                    .footer-email {
+                        &:after {
+                            font-family: @font-family__fontawesome;
+                            content: "\f003";
+                            color: @color-black;
+                            font-size: 20px;
+                        }
+                        span {
+                            display: none;
+                        }
+                        &:hover {
+                            &:after {
+                                color: #888888;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .speaker-info {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 20px;
+    }
+    .agenda-contain {
+        display: inline-block;
+        width: 100%;
+        .agenda-title {
+            > h1 {
+                font-size: 80px;
+                color: #aaa;
+                font-weight: 700;
+            }
+        }
+        .agenda-attendees {
+            .event-agenda-count {
+                color: @color-orange;
+                font-size: 27px;
+                font-weight: 700;
+                padding: 40px 0;
+                .count-holder {
+                    display: inline-block;
+                    padding-right: 15px;
+                    span {
+                        background: @color-orange;
+                        border-radius: 8px;
+                        box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.1);
+                        color: #fff;
+                        font-size: 26px;
+                        font-weight: 800;
+                        letter-spacing: -1px;
+                        margin: 0;
+                        padding: 19px 10px 18px 20px;
+                    }
+                    strong {
+                        font-weight: 800;
+                        letter-spacing: -1px;
+                        padding-left: 4px;
+                    }
+                    .workshops {
+                        background: none;
+                        box-shadow: none;
+                        color: #aaa;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    //Agenda Style
+    .confapp-agenda-wrapper {
+        margin: 0 auto 0 17.5%;
+        max-width: 1280px;
+        width: 70%;
+        .agenda-item {
+            border: 1px solid #e8e8e8;
+            display: block;
+            margin-bottom: 20px;
+            overflow: hidden;
+            padding-left: 60px;
+            position: relative;
+            .agenda-time-wrapper {
+                background-color: #e8e8e8;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 60px;
+                &:before {
+                    background-color: rgba(0, 0, 0, 0.1);
+                    content: "";
+                    height: 90%;
+                    left: 0;
+                    margin: auto;
+                    position: absolute;
+                    right: 0;
+                    width: 2px;
+                }
+                .conf-agenda-time {
+                    background-color: #e8e8e8;
+                    color: #565656;
+                    font-size: 12px;
+                    left: 0;
+                    padding: 5px 0px;
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    font-weight: bold;
+                    &.conf-agenda-time-start {
+                        top:0;
+                    }
+                    &.conf-agenda-time-end {
+                        bottom: 0;
+                    }
+                }
+            }
+            .conf-agenda-row {
+                border-top: 1px solid #e8e8e8;
+                margin: -1px 0;
+                padding: 15px 20px;
+                width: 100%;
+                box-sizing: border-box;
+                .conf-agenda-presentation-subject {
+                    color: #1a1a1a;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                table {
+                    tbody {
+                        border: 1px solid @color-white;
+                        background: #eee;
+                        tr {
+                            border-bottom: 1px solid @color-white;
+                            text-align: center;
+                            th,
+                            td {
+                                border-right: 1px solid @color-white;
+                                text-align: center;
+                            }
+                            td {
+                                padding: 8px;
+                                &:first-child {
+                                    font-weight: 600;
+                                }
+                            }
+                            th {
+                                background: #ccc;
+                                color: @color-black;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+            .agenda-time-images {
+                 img {
+                    padding-left: 20px;
+                    padding-bottom: 8px;
+                }
+                .sponsors-logo {
+                    display: inline-block;
+                    padding-left: 20px;
+                    span {
+                        color: #f74011;
+                        display: flex;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                    }
+                    img {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        .conf-agenda {
+            padding: 0;
+            margin-top: 20px;
+            li {
+                list-style-type: none;
+            }
+        }
+        .conf-days-item {
+            background: #fe7a6a;
+            border: medium none;
+            border-radius: 8px;
+            box-shadow: none;
+            color: @color-white;
+            margin-right: 20px;
+            padding: 10px 20px;
+            &.active {
+                background: #f74011;
+                &:hover {
+                    background: #f74011;
+                    cursor: default;
+                }
+            }
+            &:hover {
+                background: #ea6656;
+            }
+        }
+    }
+
+    .vip-tickets {
+        color: @color-black;
+        padding: 0 20px;
+        margin-top: 20px;
+        p {
+            color: @color-black;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    .refer-merchant {
+        color: @color-black;
+        padding: 0 20px;
+        margin-top: 20px;
+        p {
+            color: @color-black;
+        }
+    }
+    .ticket-merchant {
+        color: #000;
+        margin: 0 auto;
+        max-width: 1080px;
+        padding: 0 20px;
+    }
+    .event-organizer {
+        padding: 20px;
+        > p {
+            color: @color-black;
+        }
+    }
+    .event-organizer-images {
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0 20px;
+        width: 100%;
+        .organizer-images {
+            float: left;
+            span {
+                display: inline-block;
+                color: @color-black;
+                width: 60%;
+                margin-left: 20px;
+                text-align: justify;
+            }
+            .organizer-name {
+                color: @color-orange;
+                font-size: 25px;
+                margin: 10px 0 10px 20px;
+            }
+            > img {
+                float: left;
+                width: 250px;
+            }
+            .contact-detail {
+                color: @color-black;
+                margin-top: 10px;
+                font-weight: 600;
+                display: inline-block;
+                width: 50%;
+                span {
+                    width: auto;
+                    color: @color-orange;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+            &.vijay-image {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .still {
+        color: #b3241d;
+        font-size: 50px;
+        font-weight: 700;
+        font-style: italic;
+        border-bottom: 8px solid @color-orange;
+    }
+    a.action.primary.merchant-vip-tickets {
+        font-size: 26px !important;
+    }
+    .homepage-banner {
+        .banner-text-wrapper-right {
+            h1.pageTitle {
+                margin-bottom: 40px !important;
+            }
+        }
+    }
+    .soldOut {
+        img {
+            width: 600px;
+            height: auto;
+        }
+        position: absolute;
+        z-index: 1;
+        top: 124px;
+        left: 17%;
+    }
+
+    .cms-home {
+        .columns {
+            display: block;
+        }
+    }
+
+    ol.speakers-list {
+        margin: 0 0 20px 0;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        li {
+            height: 400px;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            transition: all ease .25s;
+            width: 16.66667%;
+            float: left;
+            list-style: none;
+            display: none;
+
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: block;
+            }
+
+            &:nth-child(1) {
+                display: none;
+            }
+
+
+            a.speaker {
+                color: @color-white;
+                display: block;
+                height: 100%;
+                overflow: hidden;
+                transition: all 0.2s ease 0s;
+                width: 100%;
+
+                img {
+                    display: block;
+                    height: 100%;
+                    left: 50%;
+                    position: relative;
+                    transform: translateX(-50%);
+                    transition: all 0.25s ease 0s;
+                    max-width: none;
+                }
+            }
+
+            .speaker-description {
+                bottom: 0;
+                line-height: 20px;
+                min-height: 75%;
+                position: absolute;
+                width: 100%;
+                height: 55%;
+                display: table;
+                div {
+                    display: table-cell;
+                    vertical-align: bottom;
+                    padding-bottom: 35px;
+                }
+                .speaker-name,
+                a {
+                    color: @color-white;
+                    display: block;
+                    font-size: 22px;
+                    width: 80%;
+                    background: @color-orange;
+                    padding: 10px;
+                    line-height: normal;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+        .our-speakers-static {
+            position: relative;
+            background: @color-orange;
+            width: 33.33333%;
+            .absolute-content {
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                padding-right: 45px;
+                padding-left: 45px;
+                h1 {
+                    color: @color-white;
+                    padding-bottom: 30px;
+                    padding-top: 10px;
+                    font-size: 81px;
+                    line-height: normal;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                p {
+                    color: @color-white;
+                    margin: 0;
+                    padding-bottom: 30px;
+                }
+                .btn-white {
+                    border: none;
+                    font-size: 15px;
+                    font-weight: 800;
+                    line-height: 1.06;
+                    text-transform: uppercase;
+                    padding: 10px 30px;
+                    -webkit-border-radius: 8px;
+                    border-radius: 8px;
+                    -webkit-box-shadow: 0 5px 7px 0 rgba(0,0,0,.1);
+                    box-shadow: 0 5px 7px 0 rgba(0,0,0,.1);
+                    -webkit-transition: all .2s;
+                    -moz-transition: all .2s;
+                    -o-transition: all .2s;
+                    transition: all .2s;
+                    background: @color-white;
+                    color: @color-orange;
+                }
+            }
+        }
+    }
+
+    .homepage-sponsors-fluid {
+        .container-fluid{
+            &.homepage-sponsors {
+                margin: 0 auto 0 16.6667%;
+                max-width: 66.6667%;
+                width: 100%;
+                .sponsors-section {
+                     h1 {
+                         color: #aaa;
+                         font-size: 80px;
+                         font-weight: bold;
+                    }
+                    a {
+                        img {
+                            box-sizing: border-box;
+                            margin-right: 30px;
+                            margin-bottom: 15px;
+                            width: 150px;
+                            padding: 10px;
+                        }
+                        &.e-zest-sponsors {
+                            img {
+                                width: 130px;
+                            }
+                        }
+                        &.nexcess-sponsors {
+                            img {
+                                width: 110px;
+                            }
+                        }
+                        &.commercepundit-sponsors {
+                            img {
+                                width: 200px;
+                            }
+                        }
+                    }
+
+                    .sponsors-section-button {
+                        margin-top: 30px;
+                        a {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .company-sponsors {
+        .company-sponsors-title {
+            h1 {
+                background: #e74011;
+                box-sizing: border-box;
+                color: @color-white;
+                font-weight: 700;
+                padding: 20px 20px 25px;
+                text-align: center;
+            }
+        }
+        .company-sponsors-logo {
+            text-align: center;
+        }
+        .sponsors-company-details {
+            margin: 30px 0;
+            padding: 0 30px;
+            .about-company,
+            .company-services,
+            .sponsors-company-url {
+                margin: 10px 0;
+                display: inline-block;
+            }
+            .company-services {
+                span{
+                    margin: 10px 0;
+                    display: inline-block;
+                }
+                ul {
+                    li {
+                        float: left;
+                        margin-right: 20px;
+                        width: 40%;
+                    }
+                }
+            }
+            .about-company {
+                span{
+                    margin: 10px 0;
+                    display: inline-block;
+                }
+            }
+            .sponsors-company-url {
+                display: inline-block;
+            }
+        }
+    }
+    .speakers-ppt {
+        display: block;
+        margin: 8px 0;
+        width: 100%;
+        img {
+            margin-top: 2px;
+            vertical-align: middle;
+        }
+        a {
+            color: @color-orange;
+            font-size: 10px;
+            margin-left: 10px;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+        &.speakers-detail-ppt {
+            border: 2px solid #fe5614;
+            padding: 10px 30px;
+            width: auto;
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            a {
+                color: @color-white;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+/* Desktop */
+& when (@media-target = 'desktop'),
+(@media-target = 'all') {
+    @media all and (min-width: (@screen__xl)) {
+        .banner {
+            .banner-text-wrapper {
+                h1{
+                    &.pageTitle  {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+    @media all and (min-width: (@screen__m)) {
+        .hide-on-dekstop {
+            display: none;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+& when (@media-target = 'mobile'),
+(@media-target = 'all') {
+    @media all and (max-width: (@screen__m)) {
+        .page-main {
+            margin-top: 0;
+        }
+        .footer-social-link {
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .agenda-contain {
+            .agenda-attendees {
+                .event-agenda-count {
+                    font-size: 3.52021vw;
+                    font-weight: 800;
+                    padding: 3.2vw 0;
+                    .count-holder {
+                        padding-right: 8px;
+                        span {
+                            font-size: 3.52021vw;
+                            font-weight: 700;
+                            letter-spacing: -1px;
+                            margin: 0;
+                            padding: 1.3vw 1vw 1.3vw 2vw;
+                        }
+                    }
+                }
+            }
+            .agenda-title {
+                > h1 {
+                    font-size: 40px;
+                    line-height:1;
+                }
+            }
+        }
+        .confapp-agenda-wrapper {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        .speaker-detail {
+            .product-info-main {
+                box-sizing: border-box;
+                padding: 10px 20px;
+                .page-title-wrapper {
+                    .page-title {
+                        .base {
+                            color: @color-white;
+                            display: inline-block;
+                            font-weight: bold;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .homepage-banner {
+            .banner-text-wrapper-right {
+                padding: 2vw;
+                h1.pageTitle{
+                    font-size: 12px;
+                    margin-bottom: 20px !important;
+                }
+                ul {
+                    display: none;
+                }
+                p {
+                    word-wrap: break-word;
+                }
+            }
+        }
+
+        .event-organizer-images {
+            .organizer-images {
+                box-sizing: border-box;
+                width: 50%;
+                padding: 0 10px;
+                .organizer-name {
+                    margin-left: 0;
+                }
+                span {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .contact-detail {
+                    width: 100%;
+                }
+                &.vijay-image {
+                    margin-top: 0;
+                }
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .homepage-sponsors-fluid {
+            .container-fluid{
+                &.homepage-sponsors {
+                    box-sizing: border-box;
+                    margin: 0 auto;
+                    max-width: 100%;
+                    padding: 5.04541vw 6.5189vw;
+                    .sponsors-section {
+                        h1 {
+                            font-size: 40px;
+                        }
+                        a {
+                            img {
+                                width: 130px;
+                            }
+
+                            &.e-zest-sponsors {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                            &.nexcess-sponsors {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                            &.commercepundit-sponsors {
+                                img {
+                                    width: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: (@screen__767)) {
+        .container {
+            padding-top: 5.04541vw;
+            padding-bottom: 5.04541vw;
+            padding-left: 6.5189vw;
+            padding-right: 6.5189vw;
+            margin: 0;
+            width: auto;
+            .content {
+                .content-left,
+                .content-right {
+                    width: 100%;
+                }
+            }
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+        }
+
+        .call-for-papers {
+            h1 {
+                font-size: 41px;
+                line-height: normal;
+            }
+        }
+
+        .banner.default-banner {
+            img {
+                display: none;
+            }
+            .banner-text-wrapper {
+                padding: 30px;
+                margin: 0;
+                position: inherit;
+                width: 100%;
+                .container {
+                    position: inherit;
+                    padding: 0;
+                }
+
+                h1.pageTitle {
+                    font-size: 41px;
+                }
+            }
+        }
+
+        #schedule {
+            .room-events {
+                .item {
+                    .agenda-hours {
+                        padding: 20px 0 0 15px;
+                    }
+                    .room-presentation {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+        .hide-on-mobile {
+            display: none;
+        }
+        ol.speakers-list {
+            li {
+                width: 25%;
+
+                &:nth-child(1) {
+                    display: block;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+            .our-speakers-static {
+                width: 100%;
+                padding: 40px 40px 50px 40px;
+                height: auto;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                .absolute-content {
+                    position: relative;
+                    display: block;
+                    padding: 0;
+                    top: 0;
+                    left: 0;
+                    h1 {
+                        font-size: 41px;
+                        line-height: 1;
+                        padding-bottom: 3.91134vw;
+                        padding-top: 0;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: (@screen__s)) {
+
+        .banner.default-banner {
+            .banner-text-wrapper {
+                padding: 20px;
+                h1.pageTitle {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        iframe {
+            width: 100% !important;
+        }
+        .action{
+            &.primary{
+                &.merchant-vip-tickets {
+                    font-size: 12px !important;
+                    padding: 10px;
+                }
+            }
+        }
+        .company-sponsors {
+            .sponsors-company-details {
+                .company-services {
+                    ul {
+                        li {
+                            float: inherit;
+                            margin-right: 0;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: (@screen__540)) {
+        .confapp-agenda-wrapper {
+            .agenda-item {
+                .conf-agenda-row {
+                    table {
+                        tbody {
+                            tr {
+                                td{
+                                    display: block;
+                                    text-align: left;
+                                    &:before {
+                                        background: #ccc;
+                                        box-sizing: border-box;
+                                        color: @color-black;
+                                        content: attr(data-label);
+                                        float: left;
+                                        font-weight: bold;
+                                        text-align: left;
+                                        text-transform: uppercase;
+                                        width: 100%;
+                                        margin-bottom: 10px;
+                                        padding: 5px;
+                                    }
+                                }
+                                &:first-child {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: (@screen__xs)) {
+        .nav-toggle {
+            top: 25px !important;
+        }
+        .header.content {
+            padding: 20px 15px !important;
+        }
+        #schedule {
+            .room-events {
+                .item {
+                    .agenda-hours {
+                        padding: 10px;
+                    }
+                    .room-presentation {
+                        padding: 10px;
+                        font-size: 12px;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+        .agenda-contain {
+            .agenda-attendees {
+                .event-agenda-count {
+                    font-size: 24px;
+                    font-weight: 800;
+                    padding: 4.5vw 0 2.7vw;
+                    .count-holder {
+                        margin-bottom: 10px;
+                        padding: 0;
+                        width: 100%;
+                        span {
+                            display: inline-block;
+                            font-size: 22px;
+                            font-weight: 800;
+                            line-height: 1.8;
+                            padding-right: 2.2vw;
+                            text-align: right;
+                            width: 80px;
+                        }
+                    }
+                }
+            }
+            .agenda-title {
+                > h1 {
+                    font-size: 8.5595vw;
+                    line-height: 0.8;
+                }
+            }
+        }
+        .confapp-agenda-wrapper {
+            .agenda-item {
+                .agenda-time-images {
+                    text-align: center;
+                    img {
+                        box-sizing: border-box;
+                        padding-bottom: 8px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+                .conf-agenda-row {
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 15px;
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    padding: 10px 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .homepage-banner {
+            .banner-text-wrapper {
+                p {
+                    font-size: 2.6vw;
+                }
+            }
+        }
+        .event-organizer-images {
+            .organizer-images {
+                width: 100%;
+                margin-top: 20px;
+                padding: 0;
+                &.vijay-image {
+                    margin-top: 50px;
+                }
+            }
+        }
+        .event-organizer {
+            > p {
+                text-align: justify;
+            }
+        }
+        ol.speakers-list {
+            li {
+                width: 50%;
+                &.our-speakers-static {
+                    padding: 20px 20px 30px;
+                }
+                .speaker-description {
+                    .speaker-name,
+                    a {
+                        font-size: 16px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        .homepage-sponsors-fluid {
+            .container-fluid{
+                &.homepage-sponsors {
+                    .sponsors-section {
+                        h1 {
+                            font-size: 8.5595vw;
+                        }
+                        .sponsors-icon-sections {
+                            text-align: center;
+                        }
+                        a {
+                            img {
+                                width: 100px;
+                                padding: 5px;
+                            }
+                            &.e-zest-sponsors {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                            &.nexcess-sponsors {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+/* Desktop */
+& when (@media-target = 'desktop'),
+(@media-target = 'all') {
+    @media all and (max-width: (@screen__xl)) {
+        .logo {
+            img {
+                width: 230px;
+            }
+        }
+    }
+    @media all and (min-width: (@screen__1200)) {
+        .homepage-banner {
+            .banner-text-wrapper {
+                p {
+                    font-size: 20px;
+                }
+
+                h1.pageTitle {
+                    font-size: 90px;
+                    margin: 1vw 0;
+                }
+            }
+
+        }
+    }
+
+    @media all and (max-width: (@screen__1200)) {
+        .navigation {
+            .level0 {
+                .level-top {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .banner {
+            .banner-text-wrapper {
+                padding: 0 0 0 20px;
+                height: 98.5%;
+            }
+        }
+
+        .homepage-banner {
+            .banner-text-wrapper {
+                height: auto;
+                padding: 2vw;
+            }
+            .banner-text-wrapper-right {
+                padding: 2vw;
+
+                h1.pageTitle {
+                    font-size: 20px;
+                }
+
+                ul {
+                    li {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .agenda-contain {
+            .agenda-attendees {
+                .event-agenda-count {
+                    font-size: 2.21998vw;
+                    font-weight: 700;
+                    padding: 3.2vw 0;
+                    .count-holder {
+                        padding-right: 8px;
+                        span {
+                            font-size: 2.21998vw;
+                            font-weight: 700;
+                            letter-spacing: -1px;
+                            margin: 0;
+                            padding: 1.3vw 1vw 1.3vw 2vw;
+                        }
+                    }
+                }
+            }
+            .agenda-title {
+                > h1 {
+                    font-size: 5vw;
+                    line-height: 4.5vw;
+                }
+            }
+        }
+        .homepage-sponsors-fluid {
+            .container-fluid{
+                &.homepage-sponsors {
+                    .sponsors-section {
+                        h1 {
+                            font-size: 5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width: (@screen__1023)) {
+        .container {
+            .content {
+                .content-left,
+                .content-right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media all and (max-width: (@screen__850)) {
+        .speaker-detail {
+            .product-info-main {
+                .page-title-wrapper {
+                    h1 {
+                        .base {
+                            font-size: 45px;
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: (@screen__xl)) {
+    ol.speakers-list {
+        .our-speakers-static {
+            .absolute-content {
+                h1 {
+                    font-size: 5vw;
+                }
+            }
+        }
+    }
+    .soldOut {
+        img {
+            width: 45vw;
+        }
+    }
+    a{
+        &.action{
+            &.primary{
+                &.merchant-vip-tickets {
+                    font-size: 1.5vw !important;
+                }
+            }
+        }
+    }
+    .still {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Copyright © 2017 Wagento. All rights reserved.
+ */
+
+/** @var \Wagento\Sponsors\Block\Sponsors $block */
+?>
+<?php
+    $_sponsorsTypeCollection = $block->getLoadedSponsorsCollection();
+    $_helper = $this->helper('Wagento\Sponsors\Helper\Data');
+    $placeHolderImageUrl = $block->getMediaUrl() . 'sponsors/placeholder/' . $_helper->getPlaceholderImage();
+?>
+<?php if (!$_sponsorsTypeCollection->count()): ?>
+    <div class="message info empty"><div><?php /* @escapeNotVerified */ echo __('We can\'t find sponsors matching the selection.') ?></div></div>
+<?php else: ?>
+    <div class="sponsors-wrapper">
+        <?php foreach ($_sponsorsTypeCollection as $_sponsorsType): ?>
+            <?php $requiredSponsors = (int) $_sponsorsType->getRequiredSponsors(); ?>
+            <?php $columnCount = (int) $_sponsorsType->getColumn(); ?>
+            <div class="sponsors-items">
+                <h2><?php /* @escapeNotVerified */ echo $_sponsorsType->getTitle() ?></h2>
+                <ul class="column_<?php echo $columnCount ?>">
+                    <?php $sponsorsCollection = $block->getSponsorsByTypeCollection($_sponsorsType->getId()); ?>
+                    <?php $sponsorsCount = (int) $sponsorsCollection->getSize(); ?>
+                    <?php foreach ($sponsorsCollection as $_sponsors): ?>
+                        <?php if(!empty($_sponsors->getImage())): ?>
+                            <?php $imageUrl = $block->getMediaUrl() . 'sponsors/image/' . $_sponsors->getImage(); ?>
+                        <?php else: ?>
+                            <?php $imageUrl = $placeHolderImageUrl; ?>
+                        <?php endif; ?>
+                        <li class="sponsors-item">
+                            <a href="<?php /* @escapeNotVerified */ echo $_sponsors->getUrlKey(); ?>" target="_blank" rel="noopener">
+                                <img src="<?php /* @escapeNotVerified */ echo $imageUrl; ?>" alt="<?php /* @escapeNotVerified */ echo $_sponsors->getName() ?>" >
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                    <?php if($requiredSponsors >= $sponsorsCount): ?>
+                        <?php $requiredSponsors = $requiredSponsors - $sponsorsCount; ?>
+                        <?php for($i = 1; $i <= $requiredSponsors; $i++): ?>
+                            <li class="sponsors-item">
+                                <img src="<?php /* @escapeNotVerified */ echo $placeHolderImageUrl; ?>" alt="<?php /* @escapeNotVerified */ echo $_sponsors->getName() ?>" >
+                            </li>
+                        <?php endfor; ?>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

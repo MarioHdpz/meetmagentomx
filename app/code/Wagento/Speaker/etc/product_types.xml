@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Wagento. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Catalog:etc/product_types.xsd">
+    <type name="speaker" label="Speaker Product" modelInstance="Wagento\Speaker\Model\Product\Type\Speaker" composite="false" isQty="true" canUseQtyDecimals="false" sortOrder="70">
+        <customAttributes>
+            <attribute name="refundable" value="false"/>
+            <attribute name="is_real_product" value="true"/>
+        </customAttributes>
+    </type>
+</config>
