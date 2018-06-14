@@ -1,0 +1,93 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var \Pengo\ContactSpeaker\Block\ContactForm $block */
+?>
+<form class="form contact Speaker"
+      action="<?= $block->escapeUrl($block->getFormAction()) ?>"
+      id="contactSpeaker-form"
+      method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?= __('Apply now as a speaker for Meet Magento 2018!') ?></span></legend><br />
+        <div class="field note no-label"><?= $block->escapeHtml(__('And it is part of the eCommerce revolution in Mexico.')) ?></div>
+        <div class="field name required">
+            <label class="label" for="name"><span><?= $block->escapeHtml(__('Name')) ?></span></label>
+            <div class="control">
+                <input name="name" id="name" title="<?= $block->escapeHtmlAttr(__('Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Pengo\ContactSpeaker\Helper\Data')->getPostValue('name') ?: $this->helper('Pengo\ContactSpeaker\Helper\Data')->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field presentation-title required">
+            <label class="label" for="presentation-title"><span><?= $block->escapeHtml(__('Title of presentation')) ?></span></label>
+            <div class="control">
+                <input name="presentation-title" id="presentation-title" title="<?= $block->escapeHtmlAttr(__('Title of presentation')) ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field description required">
+            <label class="label" for="description"><span><?= $block->escapeHtml(__('Brief description about the presentation')) ?></span></label>
+            <div class="control">
+                <textarea name="description" id="description" title="<?= $block->escapeHtmlAttr(__('Brief description about the presentation')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"><?= $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('description')) ?></textarea>
+            </div>
+        </div>
+        <div class="field experience required">
+            <label class="label" for="experience"><span><?= $block->escapeHtml(__('Experience in the subject that you want to expose')) ?></span></label>
+            <div class="control">
+                <textarea name="experience" id="experience" title="<?= $block->escapeHtmlAttr(__('Experience in the subject that you want to expose')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"><?= $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('experience')) ?></textarea>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Pengo\ContactSpeaker\Helper\Data')->getPostValue('email') ?: $this->helper('Pengo\ContactSpeaker\Helper\Data')->getUserEmail()) ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field telephone">
+            <label class="label" for="telephone"><span><?= $block->escapeHtml(__('Phone Number')) ?></span></label>
+            <div class="control">
+                <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Pengo\ContactSpeaker\Helper\Data')->getPostValue('telephone')) ?>" class="input-text" type="text" />
+            </div>
+        </div>
+
+        <div class="field company">
+            <label class="label" for="company"><span><?= $block->escapeHtml(__('Company')) ?></span></label>
+            <div class="control">
+                <input name="company" id="company" title="<?= $block->escapeHtmlAttr(__('Company')) ?>" value="" class="input-text" type="text" />
+            </div>
+        </div>
+
+        <div class="field twitter">
+            <label class="label" for="twitter"><span><?= $block->escapeHtml(__('Twitter')) ?></span></label>
+            <div class="control">
+                <input name="twitter" id="twitter" title="<?= $block->escapeHtmlAttr(__('Twitter')) ?>" value="" class="input-text" type="text" />
+            </div>
+        </div>
+
+        <div class="field linkedin">
+            <label class="label" for="linkedin"><span><?= $block->escapeHtml(__('Linkedin')) ?></span></label>
+            <div class="control">
+                <input name="linkedin" id="linkedin" title="<?= $block->escapeHtmlAttr(__('Linkedin')) ?>" value="" class="input-text" type="text" />
+            </div>
+        </div>
+
+        <div class="field website">
+            <label class="label" for="website"><span><?= $block->escapeHtml(__('Personal Blog / Website')) ?></span></label>
+            <div class="control">
+                <input name="website" id="website" title="<?= $block->escapeHtmlAttr(__('Personal Blog / Website')) ?>" value="" class="input-text" type="text" />
+            </div>
+        </div>
+        <?= $block->getChildHtml('form.additional.info') ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>
