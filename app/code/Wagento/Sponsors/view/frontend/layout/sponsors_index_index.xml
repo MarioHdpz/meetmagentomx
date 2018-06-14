@@ -8,6 +8,13 @@
   <body>
     <referenceBlock name="content">
       <block class="Wagento\Sponsors\Block\Sponsors" name="sponsors" template="Wagento_Sponsors::list.phtml" />
+      <container name="container.cms" htmlTag="div" htmlClass="container-information">
+        <block class="Magento\Cms\Block\Block" name="sponsors.info">
+          <arguments>
+            <argument name="block_id" xsi:type="string">sponsors_info</argument>
+          </arguments>
+        </block>
+      </container>
     </referenceBlock>
   </body>
 </page>
