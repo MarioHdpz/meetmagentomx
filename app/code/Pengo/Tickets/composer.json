@@ -1,0 +1,22 @@
+{
+    "name": "pengo/module-tickets",
+    "description": "Module for buy tickets (one virtual product)",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "mario@space.bar",
+            "name": "Mario HD"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pengo\\Tickets\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

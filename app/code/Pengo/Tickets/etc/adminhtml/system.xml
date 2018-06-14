@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="pengo" translate="label" sortOrder="900">
+            <label>Pengo</label>
+        </tab>
+        <section id="tickets" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Tickets</label>
+            <tab>pengo</tab>
+            <resource>Pengo_Ticket::config</resource>
+            <group id="ticket_product" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Ticket Product Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_id" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ticket Product Id</label>
+                    <comment>Choose ticket product (Configured in catalog).</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
