@@ -22,7 +22,7 @@ class ContactForm extends Template
     public function __construct(Template\Context $context, array $data = [])
     {
         parent::__construct($context, $data);
-        $this->_isScopePrivate = true;
+        #$this->_isScopePrivate = true;
     }
 
     /**

@@ -34,6 +34,54 @@
                 <textarea name="description" id="description" title="<?= $block->escapeHtmlAttr(__('Brief description about the presentation')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"><?= $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('description')) ?></textarea>
             </div>
         </div>
+        <div class="field focus">
+            <label class="label" for="marketing">
+                <span><?= $block->escapeHtml(__('Focus')) ?></span>
+            </label>
+            <div class="field focus-business required">
+                <label class="label" for="marketing">
+                    <span><?= $block->escapeHtml(__('Business')) ?></span>
+                </label>
+                <div class="options-list">
+                    <div class="field choice">
+                        <input type="radio" class="radio" id="marketing" data-validate="{'validate-one-required-by-name':true}" name="focus" value="Marketing">
+                        <label class="label" for="marketing">
+                            <span><?= $block->escapeHtml(__('Marketing')) ?></span>
+                        </label>
+                    </div>
+                    <div class="field choice">
+                        <input type="radio" class="radio" id="pm" data-validate="{'validate-one-required-by-name':true}" name="focus" value="Project Management">
+                        <label class="label" for="pm">
+                            <span><?= $block->escapeHtml(__('Project Management')) ?></span>
+                        </label>
+                    </div>
+                    <div class="field choice">
+                        <input type="radio" class="radio" id="operations" data-validate="{'validate-one-required-by-name':true}" name="focus" value="operations">
+                        <label class="label" for="operations">
+                            <span><?= $block->escapeHtml(__('Operations')) ?></span>
+                        </label>
+                    </div>
+                </div>
+                <label class="label" for="marketing">
+                    <span><?= $block->escapeHtml(__('Tecnical')) ?></span>
+                </label>
+                <div class="options-list">
+                    <div class="field choice">
+                        <input type="radio" class="radio" id="development" data-validate="{'validate-one-required-by-name':true}" name="focus" value="Desarrollo">
+                        <label class="label" for="development">
+                            <span><?= $block->escapeHtml(__('Development')) ?></span>
+                        </label>
+                    </div>
+                    <div class="field choice">
+                        <input type="radio" class="radio" id="tecnologia" data-validate="{'validate-one-required-by-name':true}" name="focus" value="Tecnologia">
+                        <label class="label" for="tecnologia">
+                            <span><?= $block->escapeHtml(__('Technology')) ?></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="field experience required">
             <label class="label" for="experience"><span><?= $block->escapeHtml(__('Experience in the subject that you want to expose')) ?></span></label>
             <div class="control">
@@ -52,28 +100,24 @@
                 <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Pengo\ContactSpeaker\Helper\Data')->getPostValue('telephone')) ?>" class="input-text" type="text" />
             </div>
         </div>
-
         <div class="field company">
             <label class="label" for="company"><span><?= $block->escapeHtml(__('Company')) ?></span></label>
             <div class="control">
                 <input name="company" id="company" title="<?= $block->escapeHtmlAttr(__('Company')) ?>" value="" class="input-text" type="text" />
             </div>
         </div>
-
         <div class="field twitter">
             <label class="label" for="twitter"><span><?= $block->escapeHtml(__('Twitter')) ?></span></label>
             <div class="control">
                 <input name="twitter" id="twitter" title="<?= $block->escapeHtmlAttr(__('Twitter')) ?>" value="" class="input-text" type="text" />
             </div>
         </div>
-
         <div class="field linkedin">
             <label class="label" for="linkedin"><span><?= $block->escapeHtml(__('Linkedin')) ?></span></label>
             <div class="control">
                 <input name="linkedin" id="linkedin" title="<?= $block->escapeHtmlAttr(__('Linkedin')) ?>" value="" class="input-text" type="text" />
             </div>
         </div>
-
         <div class="field website">
             <label class="label" for="website"><span><?= $block->escapeHtml(__('Personal Blog / Website')) ?></span></label>
             <div class="control">

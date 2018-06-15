@@ -11,7 +11,7 @@
             <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="contactSpeaker/contactSpeaker/enabled" name="contact-speaker-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Contact Speaker</argument>
-                    <argument name="path" xsi:type="string">contactSpeaker</argument>
+                    <argument name="path" xsi:type="string">contactSpeaker/index</argument>
                 </arguments>
             </block>
         </referenceBlock>
